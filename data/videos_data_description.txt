@@ -1,0 +1,97 @@
+The description is summarized from "A video resource represents a YouTube video.", which includes 5 parts of video resources: id, snippet, statistics, status, topicDetails, contentDetails.
+Link full: https://developers.google.com/youtube/v3/docs/videos
+
+* id: string
+The ID that YouTube uses to uniquely identify the video.
+
+---
+
+* snippet: The snippet object contains basic details about the video, such as its title, description, and category.
+
+- title: string
+The video's title.
+
+- publishedAt: datetime
+The date and time that the video was published. Note that this time might be different than the time that the video was uploaded. For example, if a video is uploaded as a private video and then made public at a later time, this property will specify the time that the video was made public. The value is specified in ISO 8601 format.
+
+- thumbnailUrl: string
+The default thumbnail image's URL.
+
+- categoryId: string
+The YouTube video category associated with the video.
+
+- defaultAudioLanguage: string
+The default_audio_language property specifies the language spoken in the video's default audio track.
+
+- tags: list
+A list of keyword tags associated with the video.
+
+---
+
+* statistics: The statistics object contains statistics about the video.
+
+- viewCount: unsigned long
+The number of times the video has been viewed.
+
+- likeCount: unsigned long
+The number of users who have indicated that they liked the video.
+
+- dislikeCount: unsigned long
+The default thumbnail image's URL.
+
+- commentCount: unsigned long
+The number of comments for the video.
+
+---
+
+* status: The status object contains information about the video's uploading, processing, and privacy statuses.
+
+- uploadStatus: string
+The status of the uploaded video.
+
+- privacyStatus: string
+The video's privacy status.
+
+- license: string
+The video's license.
+
+- embeddable: boolean
+This value indicates whether the video can be embedded on another website.
+
+- publicStatsViewable: boolean
+This value indicates whether the extended video statistics on the video's watch page are publicly viewable.
+
+- madeForKids: boolean
+This value indicates whether the video is designated as child-directed, and it contains the current "made for kids" status of the video.
+
+---
+
+* topicDetails: The topicDetails object encapsulates information about topics associated with the video.
+
+- topicCategories: list
+A list of Wikipedia URLs that provide a high-level description of the video's content.
+
+---
+
+* contentDetails: The contentDetails object contains information about the video content, including the length of the video and an indication of whether captions are available for the video.
+
+- duration: string
+The length of the video. The property value is an ISO 8601 duration.
+
+- dimension: string
+Indicates whether the video is available in 3D or in 2D.
+
+- definition: string
+Indicates whether the video is available in high definition (HD) or only in standard definition (SD).
+
+- caption: string
+Indicates whether captions are available for the video.
+
+- licensedContent: boolean
+Indicates whether the video represents licensed content, which means that the content was uploaded to a channel linked to a YouTube content partner and then claimed by that partner.
+
+- contentRating: object
+Specifies the ratings that the video received under various rating schemes.
+
+- projection: string
+Specifies the projection format of the video.
